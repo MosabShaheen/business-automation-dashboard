@@ -3,20 +3,20 @@
 import * as React from "react"
 import {
   IconCamera,
-  IconChartBar,
+  IconTopologyStar,
   IconDashboard,
-  IconDatabase,
   IconFileAi,
   IconFileDescription,
-  IconFileWord,
-  IconFolder,
+  IconListDetails,
   IconHelp,
   IconInnerShadowTop,
-  IconListDetails,
-  IconReport,
   IconSearch,
   IconSettings,
-  IconUsers,
+  IconUsersGroup,
+  IconMessageChatbot,
+  IconUser,
+  IconRepeat,
+  IconFolders
 } from "@tabler/icons-react"
 
 import { NavDocuments } from "@/components/nav-documents"
@@ -46,24 +46,44 @@ const data = {
       icon: IconDashboard,
     },
     {
-      title: "Lifecycle",
-      url: "#",
+      title: "Workflows",
+      url: "/workflows",
+      icon: IconRepeat,
+    },
+    {
+      title: "Builder",
+      url: "/builder",
+      icon: IconTopologyStar,
+    },
+    {
+      title: "Logs",
+      url: "/logs",
       icon: IconListDetails,
     },
     {
-      title: "Analytics",
-      url: "#",
-      icon: IconChartBar,
+      title: "Clients",
+      url: "/clients",
+      icon: IconUser,
     },
     {
       title: "Projects",
-      url: "#",
-      icon: IconFolder,
+      url: "/projects",
+      icon: IconFolders,
+    },
+    {
+      title: "AI",
+      url: "/ai",
+      icon: IconMessageChatbot,
     },
     {
       title: "Team",
       url: "/team",
-      icon: IconUsers,
+      icon: IconUsersGroup,
+    },
+    {
+      title: "Settings",
+      url: "/settings",
+      icon: IconSettings,
     },
   ],
   navClouds: [
@@ -131,23 +151,6 @@ const data = {
       icon: IconSearch,
     },
   ],
-  documents: [
-    {
-      name: "Data Library",
-      url: "#",
-      icon: IconDatabase,
-    },
-    {
-      name: "Reports",
-      url: "#",
-      icon: IconReport,
-    },
-    {
-      name: "Word Assistant",
-      url: "#",
-      icon: IconFileWord,
-    },
-  ],
 }
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
@@ -170,7 +173,6 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       </SidebarHeader>
       <SidebarContent>
         <NavMain items={data.navMain} />
-        <NavDocuments items={data.documents} />
         <NavSecondary items={data.navSecondary} className="mt-auto" />
       </SidebarContent>
       <SidebarFooter>

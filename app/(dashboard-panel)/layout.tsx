@@ -43,7 +43,6 @@ export default function RootLayout({
                     <AppSidebar variant="inset" />
                     <SidebarInset>
                         <SiteHeader />
-
                         {children}
                     </SidebarInset>
                 </SidebarProvider>
